@@ -421,9 +421,9 @@ def main():
         has_skipped_integration, integrations, is_nightly_integration = collect_integrations(
             integrations_conf, skipped_integration, skipped_integrations_conf, nightly_integrations)
 
-        skip_nightly_test = True if (nightly_test or is_nightly_integration) and not is_nightly else False
+        # skip_nightly_test = True if (nightly_test or is_nightly_integration) and not is_nightly else False
 
-        skip_nightly_test = False # DEBUG
+        skip_nightly_test = False  # DEBUG
 
         # Skip nightly test
         if skip_nightly_test:
