@@ -1252,6 +1252,7 @@
         "McAfee NSM": "Nightly - Checking",
         "Forcepoint": "Nightly - Checking",
         "RedCanary": "Nightly - Checking",
-        "Panorama": "Proxy is configured in the integration even when it's disabled"
+        "Panorama": "Proxy is configured in the integration even when it's disabled",
+        "McAfee Active Response": "Nightly - Checking"
     }
 }
