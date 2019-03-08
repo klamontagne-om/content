@@ -43,7 +43,8 @@
         },
         {
             "integrations": "Pwned",
-            "playbookID": "Pwned test"
+            "playbookID": "Pwned test",
+            "nightly": true
         },
         {
             "integrations": "Alexa Rank Indicator",
@@ -138,7 +139,8 @@
         {
             "integrations": "SNDBOX",
             "playbookID": "Detonate File - SNDBOX - Test",
-            "timeout": 2400
+            "timeout": 2400,
+            "nightly": true
         },
         {
             "integrations": "VxStream",
@@ -155,7 +157,8 @@
         {
           "integrations": "Tenable.sc",
           "playbookID": "tenable-sc-test",
-          "timeout": 240
+          "timeout": 240,
+          "nightly": true
         },
         {
             "integrations": "MimecastV2",
@@ -174,13 +177,15 @@
             "integrations": "Panorama",
             "instance_names": "palo_alto_firewall",
             "playbookID": "palo_alto_firewall_test_pb",
-            "timeout": 1000
+            "timeout": 1000,
+            "nightly": true
         },
         {
             "integrations": "Panorama",
             "instance_names": "palo_alto_panorama",
             "playbookID": "palo_alto_panorama_test_pb",
-            "timeout": 1000
+            "timeout": 1000,
+            "nightly": true
         },
         {
           "integrations": "Tenable.io",
@@ -195,21 +200,25 @@
         {
           "integrations": "Tenable.io",
           "playbookID": "Tenable.io Scan Test",
+          "nightly": true,
           "timeout": 900
         },
         {
             "integrations": "Tenable.sc",
             "playbookID": "tenable-sc-scan-test",
+            "nightly": true,
             "timeout": 600
         },
         {
             "integrations": "google-vault",
             "playbookID": "Google-Vault-Generic-Test",
+            "nightly": true,
             "timeout": 3600
         },
         {
             "integrations": "google-vault",
             "playbookID": "Google_Vault-Search_And_Display_Results_test",
+            "nightly": true,
             "timeout": 3600
         },
         {
@@ -245,12 +254,14 @@
             "integrations": "IntSights",
             "instance_names": "intsights_standard_account",
             "playbookID": "IntSights Test",
+            "nightly": true,
             "timeout": 500
         },
         {
             "integrations": "IntSights",
             "playbookID": "IntSights Mssp Test",
             "instance_names": "intsights_mssp_account",
+            "nightly": true,
             "timeout": 500
         },
         {
@@ -318,7 +329,8 @@
         },
         {
             "integrations": "Lastline",
-            "playbookID": "Lastline - testplaybook"
+            "playbookID": "Lastline - testplaybook",
+            "nightly": true
         },
         {
             "integrations": "epo",
@@ -346,12 +358,14 @@
         {
             "integrations": "Joe Security",
             "playbookID": "JoeSecurityTestPlaybook",
-            "timeout": 500
+            "timeout": 500,
+            "nightly": true
         },
         {
             "integrations": "Joe Security",
             "playbookID": "JoeSecurityTestDetonation",
-            "timeout": 2000
+            "timeout": 2000,
+            "nightly": true
         },
         {
             "integrations": "WildFire",
@@ -359,7 +373,8 @@
         },
         {
             "integrations": "GRR",
-            "playbookID": "grr_test"
+            "playbookID": "grr_test",
+            "nightly": true
         },
         {
             "integrations": "RSA NetWitness Packets and Logs",
@@ -368,6 +383,7 @@
         {
             "integrations": "VirusTotal",
             "playbookID": "virusTotal-test-playbook",
+            "nightly": true,
             "timeout": 1400
         },
         {
@@ -435,6 +451,7 @@
         {
             "integrations": "Intezer",
             "playbookID": "Intezer Testing",
+            "nightly": true,
             "timeout": 500
         },
         {
@@ -570,7 +587,8 @@
         },
         {
             "integrations": "RSA Archer",
-            "playbookID": "Archer-Test-Playbook"
+            "playbookID": "Archer-Test-Playbook",
+            "nightly": true
         },
         {
             "integrations": "jira",
@@ -616,7 +634,8 @@
         {
             "integrations" : "McAfee NSM",
             "playbookID" : "McAfeeNSMTest",
-            "timeout" : 400
+            "timeout" : 400,
+            "nightly": true
         },
         {
             "integrations": "PhishTank",
@@ -650,7 +669,8 @@
         {
             "integrations": "Forcepoint",
             "playbookID": "forcepoint test",
-            "timeout": 500
+            "timeout": 500,
+            "nightly": true
         },
         {
             "playbookID": "GeneratePassword-Test"
@@ -673,7 +693,8 @@
         },
         {
             "integrations": "carbonblackliveresponse",
-            "playbookID": "CarbonBlackLiveResponseTest"
+            "playbookID": "CarbonBlackLiveResponseTest",
+            "nightly": true
         },
         {
             "playbookID": "TestSafeBreach",
@@ -719,7 +740,8 @@
         },
         {
             "integrations": "VirusTotal - Private API",
-            "playbookID": "virusTotalPrivateAPI-test-playbook"
+            "playbookID": "virusTotalPrivateAPI-test-playbook",
+            "nightly": true
         },
         {
             "integrations": "Cisco Meraki",
@@ -728,11 +750,13 @@
         {
             "integrations": "Tanium",
             "playbookID": "Tanium Test Playbook",
+            "nightly": true,
             "timeout": 1200
         },
         {
             "integrations": "Recorded Future",
-            "playbookID": "Recorded Future Test"
+            "playbookID": "Recorded Future Test",
+            "nightly": true
         },
         {
             "integrations": "Microsoft Graph",
@@ -740,7 +764,8 @@
         },
         {
             "integrations": "RedLock",
-            "playbookID": "RedLockTest"
+            "playbookID": "RedLockTest",
+            "nightly": true
         },
         {
             "integrations": "Symantec Messaging Gateway",
@@ -752,7 +777,8 @@
         },
         {
             "integrations": "VxStream",
-            "playbookID": "VxStream Test"
+            "playbookID": "VxStream Test",
+            "nightly": true
         },
         {
             "integrations":"Cylance Protect",
@@ -825,7 +851,8 @@
         {
             "integrations": "XFE",
             "playbookID": "XFE Test",
-            "timeout": 140
+            "timeout": 140,
+            "nightly": true
         },
         {
             "integrations": [
@@ -845,11 +872,13 @@
         },
         {
             "integrations": "AbuseIPDB",
-            "playbookID": "AbuseIPDB Test"
+            "playbookID": "AbuseIPDB Test",
+            "nightly": true
         },
         {
             "integrations": "AbuseIPDB",
-            "playbookID": "AbuseIPDB PopulateIndicators Test"
+            "playbookID": "AbuseIPDB PopulateIndicators Test",
+            "nightly": true
         },
         {
             "integrations" : "jira",
@@ -890,7 +919,8 @@
         },
         {
             "integrations": "Qualys",
-            "playbookID": "Qualys-Test"
+            "playbookID": "Qualys-Test",
+            "nightly": true
         },
         {
             "playbookID": "whois_test"
@@ -941,6 +971,7 @@
         {
            "playbookID": "Detonate File - Generic Test",
            "timeout": 2000,
+           "nightly": true,
            "integrations": [
              "VxStream",
              "McAfee Advanced Threat Defense",
@@ -951,6 +982,7 @@
         {
            "playbookID": "Detonate URL - Generic Test",
            "timeout": 2000,
+           "nightly": true,
            "integrations": [
              "McAfee Advanced Threat Defense",
              "VxStream",
@@ -981,7 +1013,8 @@
         },
         {
             "integrations": "Zscaler",
-            "playbookID": "Zscaler Test"
+            "playbookID": "Zscaler Test",
+            "nightly": true
         },
         {
             "playbookID": "DemistoUploadFileToIncident Test",
@@ -1001,6 +1034,7 @@
         {
             "playbookID": "Phishing test - attachment",
             "timeout": 600,
+            "nightly": true,
             "integrations": [
                 "EWS Mail Sender",
                 "Pwned",
@@ -1011,6 +1045,7 @@
         {
             "playbookID": "Phishing test - Inline",
             "timeout": 500,
+            "nightly": true,
             "integrations": [
                 "EWS Mail Sender",
                 "Pwned",
@@ -1047,12 +1082,14 @@
         {
             "integrations": "Google Resource Manager",
             "playbookID": "GoogleResourceManager-Test",
-            "timeout": 500
+            "timeout": 500,
+            "nightly": true
         },
         {
             "integrations": "Freshdesk",
             "playbookID": "Freshdesk-Test",
-            "timeout": 500
+            "timeout": 500,
+            "nightly": true
         },
         {
             "playbookID": "Autoextract - Test"
@@ -1135,7 +1172,8 @@
         "Check Point Sandblast": "No access (issue 15948)"
     },
     "nigthly_integrations": [
-
+        "Lastline",
+        "TruSTAR"
     ],
     "unmockable_integrations": {
         "EWS Mail Sender": "Inconsistent test (playback fails, record succeeds)",
