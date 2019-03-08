@@ -382,8 +382,8 @@ def main():
     secret_params = secret_conf['integrations'] if secret_conf else []
 
     filterd_tests, is_filter_configured, run_all_tests = extract_filtered_tests()
-    if is_filter_configured and not run_all_tests:
-        is_nightly = True
+    # if is_filter_configured and not run_all_tests:
+    #     is_nightly = True
 
     if not tests or len(tests) == 0:
         print('no integrations are configured for test')
@@ -421,9 +421,7 @@ def main():
         has_skipped_integration, integrations, is_nightly_integration = collect_integrations(
             integrations_conf, skipped_integration, skipped_integrations_conf, nightly_integrations)
 
-        # skip_nightly_test = True if (nightly_test or is_nightly_integration) and not is_nightly else False
-
-        skip_nightly_test = False  # DEBUG
+        skip_nightly_test = True if (nightly_test or is_nightly_integration) and not is_nightly else False
 
         # Skip nightly test
         if skip_nightly_test:
