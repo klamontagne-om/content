@@ -382,8 +382,8 @@ def main():
     secret_params = secret_conf['integrations'] if secret_conf else []
 
     filterd_tests, is_filter_configured, run_all_tests = extract_filtered_tests()
-    # if is_filter_configured and not run_all_tests:
-    #     is_nightly = True
+    if is_filter_configured and not run_all_tests:
+        is_nightly = True
 
     if not tests or len(tests) == 0:
         print('no integrations are configured for test')
