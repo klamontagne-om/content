@@ -38,8 +38,8 @@ jobs:
       - run:
           name: Configure Test Filter
           command: |
+              NIGHTLY=true
               [ -n "${NIGHTLY}" ] && IS_NIGHTLY=true || IS_NIGHTLY=false
-              IS_NIGHTLY=true
               python ./Tests/scripts/configure_tests.py -n $IS_NIGHTLY
       - run:
           name: Build Content Descriptor
