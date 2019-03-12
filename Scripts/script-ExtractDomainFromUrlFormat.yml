@@ -7,25 +7,34 @@ script: |-
   from validate_email import validate_email
   import re
 
-
-  inp = demisto.args()['input']
-
-  is_email = validate_email(inp)
-  if is_email:
-      domain = re.search("@[\w.]+", inp)
-      if len(domain.group()) > 0:
-          demisto.results(domain.group()[1:])
-  else:
-      domain = get_tld(inp, fail_silently=True)
-      if not domain:
-          inp_with_http = 'https://'+inp
-          domain = get_tld(inp_with_http, fail_silently=True)
-          if domain:
-              demisto.results(domain)
-          else:
-             demisto.results("")
+  def extract_domain(the_input):
+      is_email = validate_email(the_input)
+      if is_email:
+          domain = re.search('@[\w.]+', the_input)
+          if len(domain.group()) > 0:
+              return(domain.group()[1:])
       else:
-          demisto.results(domain)
+          domain = get_tld(the_input, fail_silently=True)
+          if not domain:
+              the_input_with_http = 'https://' + the_input
+              domain = get_tld(the_input_with_http, fail_silently=True)
+              if domain:
+                  return(domain)
+              else:
+                 return('')
+          else:
+              return(domain)
+
+  domains = []
+  the_input = demisto.args().get('input')
+
+  if isinstance(the_input, str):
+      the_input = argToList(the_input)
+
+  # Otherwise assumes it's an array
+  for item in the_input:
+      domains.append(extract_domain(item))
+  demisto.results(domains)
 type: python
 tags:
 - indicator-format
@@ -35,6 +44,9 @@ args:
 - name: input
   required: true
   default: true
-  description: The URL or Email to process
+  description: The URL(s) or Email(s) to process
 scripttarget: 0
+runonce: false
 dockerimage: demisto/tld
+runas: DBotWeakRole
+releaseNotes: Update script to accept array input
