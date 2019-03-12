@@ -50,3 +50,5 @@ runonce: false
 dockerimage: demisto/tld
 runas: DBotWeakRole
 releaseNotes: Update script to accept array input
+tests:
+  - ExtractDomainFromUrlAndEmail-Test
