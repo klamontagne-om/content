@@ -3,6 +3,10 @@
     "testInterval": 20,
     "tests": [
         {
+            "integrations": "Palo Alto Minemeld",
+            "playbookID": "minemeld_test"
+        },
+        {
             "playbookID": "Phishing test - attachment",
             "timeout": 600,
             "integrations": [
@@ -21,10 +25,6 @@
                 "Demisto REST API",
                 "Palo Alto Minemeld"
             ]
-        },
-        {
-            "integrations": "Palo Alto Minemeld",
-            "playbookID": "minemeld_test"
         },
         {
             "playbookID": "TestParseEmailFile-deprecated-script"

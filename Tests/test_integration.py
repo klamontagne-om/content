@@ -32,6 +32,8 @@ def __get_integration_config(client, integration_name):
     all_configurations = res['configurations']
     match_configurations = [x for x in all_configurations if x['name'] == integration_name]
 
+    print match_configurations  # Debug
+
     if not match_configurations or len(match_configurations) == 0:
         print_error('integration was not found')
         return None
@@ -312,6 +314,6 @@ def test_integration(client, integrations, playbook_id, options=None, is_mock_ru
         __delete_incident(client, incident)
 
         # delete integration instance
-        __delete_integrations_instances(client, module_instances)
+        # __delete_integrations_instances(client, module_instances) # TODO: Enable
 
     return test_pass, inc_id
