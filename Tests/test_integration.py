@@ -312,6 +312,6 @@ def test_integration(client, integrations, playbook_id, options=None, is_mock_ru
         __delete_incident(client, incident)
 
         # delete integration instance
-        # __delete_integrations_instances(client, module_instances) # TODO: Enable
+        __delete_integrations_instances(client, module_instances)
 
     return test_pass, inc_id
