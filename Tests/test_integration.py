@@ -32,8 +32,6 @@ def __get_integration_config(client, integration_name):
     all_configurations = res['configurations']
     match_configurations = [x for x in all_configurations if x['name'] == integration_name]
 
-    print match_configurations  # Debug
-
     if not match_configurations or len(match_configurations) == 0:
         print_error('integration was not found')
         return None
