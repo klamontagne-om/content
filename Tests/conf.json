@@ -3,6 +3,30 @@
     "testInterval": 20,
     "tests": [
         {
+            "integrations": "Palo Alto Minemeld",
+            "playbookID": "minemeld_test"
+        },
+        {
+            "playbookID": "Phishing test - attachment",
+            "timeout": 600,
+            "integrations": [
+                "EWS Mail Sender",
+                "Pwned",
+                "Demisto REST API",
+                "Palo Alto Minemeld"
+            ]
+        },
+        {
+            "playbookID": "Phishing test - Inline",
+            "timeout": 500,
+            "integrations": [
+                "EWS Mail Sender",
+                "Pwned",
+                "Demisto REST API",
+                "Palo Alto Minemeld"
+            ]
+        },
+        {
             "playbookID": "TestParseEmailFile-deprecated-script"
         },
         {
@@ -232,10 +256,6 @@
             ],
             "instance_names": "palo_alto_firewall",
             "playbookID": "blockip_test_playbook"
-        },
-        {
-            "integrations": "Palo Alto Minemeld",
-            "playbookID": "minemeld_test"
         },
         {
             "integrations": "InfoArmor VigilanteATI",
@@ -999,26 +1019,6 @@
 
         },
         {
-            "playbookID": "Phishing test - attachment",
-            "timeout": 600,
-            "integrations": [
-                "EWS Mail Sender",
-                "Pwned",
-                "Demisto REST API",
-                "Palo Alto Minemeld"
-            ]
-        },
-        {
-            "playbookID": "Phishing test - Inline",
-            "timeout": 500,
-            "integrations": [
-                "EWS Mail Sender",
-                "Pwned",
-                "Demisto REST API",
-                "Palo Alto Minemeld"
-            ]
-        },
-        {
             "integrations": "duo",
             "playbookID": "DUO Test Playbook"
         },
@@ -1171,7 +1171,6 @@
         "urlscan.io": "Pending merge of branch proxy-unsecure-checks",
         "Threat Grid": "Pending merge of branch proxy-unsecure-checks",
         "OTRS": "Pending merge of branch proxy-unsecure-checks",
-        "Palo Alto Minemeld": "Pending merge of branch proxy-unsecure-checks",
         "McAfee Advanced Threat Defense": "Pending merge of branch proxy-unsecure-checks",
         "Preempt": "Insecure has a non empty default value, will require fixing and merging",
         "QRadar": "Insecure and proxy have a non empty default value, will require fixing and merging",
