@@ -79,6 +79,16 @@ script:
         del os.environ['HTTPS_PROXY']
         del os.environ['http_proxy']
         del os.environ['https_proxy']
+        PROXIES = {
+            'http': None,
+            'https': None
+        }
+    else:
+        PROXIES = {
+            'http': os.environ['http_proxy'] or os.environ['HTTP_PROXY'],
+            'https': os.environ['https_proxy'] or os.environ['HTTPS_PROXY']
+        }
+
 
     def get_server_url():
         url = demisto.params()['url']
@@ -225,13 +235,13 @@ script:
                 with open(file_name, 'rb') as f:
                     files = {'file': f}
                     res = requests.request(method, url, headers=headers, params=params, data=body,files=files, auth=(USERNAME, PASSWORD),
-                    verify=VERIFY_SSL)
+                    verify=VERIFY_SSL, proxies=PROXIES)
                 shutil.rmtree(demisto.getFilePath(file_entry)['name'], ignore_errors=True)
             except Exception as e:
                 raise Exception('Failed to upload file - ' + e.message)
         else:
             res = requests.request(method, url, headers=headers, data=json.dumps(body), params=params, auth=(USERNAME, PASSWORD),
-            verify=VERIFY_SSL)
+            verify=VERIFY_SSL, proxies=PROXIES)
 
         try:
             obj = res.json()
@@ -574,7 +584,7 @@ script:
             links = [(attachment['download_link'], attachment['file_name']) for attachment in attachments]
 
         for link in links:
-            file_res = requests.get(link[0], auth=(USERNAME, PASSWORD), verify=VERIFY_SSL)
+            file_res = requests.get(link[0], auth=(USERNAME, PASSWORD), verify=VERIFY_SSL, proxies=PROXIES)
             if file_res is not None:
                 entries.append(fileResult(link[1], file_res.content))
 
@@ -3532,5 +3542,4 @@ script:
       are required for the sys_journal_field table.
   isfetch: true
   runonce: false
-tests:
-  - No test - Hibernating instance
+releaseNotes: "-"
