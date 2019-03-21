@@ -84,7 +84,7 @@
         },
         {
             "integrations": "ServiceNow",
-            "playbookID": "servicenow_test_new"
+            "playbookID": "servicenow_test"
         },
         {
             "playbookID": "Test CommonServer"

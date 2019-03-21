@@ -1,6 +1,7 @@
 id: servicenow_test
 version: -1
 name: ServiceNow Test
+toversion: 4.0.0
 description: This playbook tests the ServiceNow integration commands.
 starttaskid: "0"
 tasks:
