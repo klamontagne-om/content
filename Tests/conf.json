@@ -1143,6 +1143,10 @@
         {
             "integrations": "VirusTotal",
             "playbookID": "File Enrichment - Generic Test"
+        },
+        {
+            "integrations": "Snowflake",
+            "playbookID": "Snowflake-Test"
         }
     ],
     "skipped_tests": {
